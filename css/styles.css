@@ -10,6 +10,19 @@
     animation-duration: 1.5s;
 }
 
+.item_barra{
+    border: solid 3px;
+    padding: 2px;
+    transition: all .3s;
+}
+
+/* es una pseudoclase.. */
+.item_barra:hover{
+    transform: scaleY(1.4);
+}
+
+
+/* animaciones solo para la pagina de contacto  */
 .uno.animate__animated.animate__zoomInUp{
     animation-delay: 0.2s;
 }
@@ -21,6 +34,17 @@
 }
 .cuatro.animate__animated.animate__zoomInUp{
     animation-delay: 0.8s;
+}
+
+/* se modifican tiempos de animacion de galeria  */
+.imgdos.animate__animated.animate__backInLeft{
+    animation-delay: 0.2s;
+}
+.imgtres.animate__animated.animate__backInRight{
+    animation-delay: 0.3s;
+}
+.imgcuatro.animate__animated.animate__backInRight{
+    animation-delay: 0.5s;
 }
 
 /* se importa fuente  */
