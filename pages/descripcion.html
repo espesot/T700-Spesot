@@ -11,34 +11,60 @@
     <!-- refernecia a la hoja de estilos  -->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- se agrega el link de bootstrap 5t.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">
-                <img class="header_navLogo animate__animated animate__zoomInUp" src="../img/teer.jpeg" alt="LogoEmpresa">
-            </a>
-            <ul>
-                <li class="item_barra"><a href="../index.html">Inicio</a></li>
-                <li class="item_barra"><a href="../pages/descripcion.html">Descripcion</a></li>
-                <li class="item_barra"><a href="../pages/galeria.html">Galeria</a></li>
-                <li class="item_barra"><a href="../pages/nosotros.html">Compañia</a></li>
-                <li class="item_barra"><a href="../pages/contacto.html">Contacto</a></li>
-            </ul>
+    <header class="container-fluid bg-primary">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/teer.jpeg" alt="logot700"
+                        class="rounded-3 header_navLogo animate__animated animate__zoomInUp">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item item_barra">
+                            <a class="nav-link fs-6 fw-light" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item item_barra">
+                            <a class="nav-link fs-6 fw-light" href="./descripcion.html">Descripcion</a>
+                        </li>
+                        <li class="nav-item item_barra">
+                            <a class="nav-link fs-6 fw-light" href="./galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item item_barra">
+                            <a class="nav-link fs-6 fw-light" href="./nosotros.html">Compañia</a>
+                        </li>
+                        <li class="nav-item item_barra">
+                            <a class="nav-link fs-6 fw-light" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
     </header>
 
-    <main>
+    <main class="conteiner-fluid">
         <!-- Beneficios  -->
-        <section class="section">
-            <div class="section_img">
-                <img src="../img/beneficio.jpeg" alt="Beneficios">
+        <section class="row justify-content-center bg-light mt-4 mb-4 ms-2 me-2 shadow-lg">
+            <div class="col-lg-6 align-self-center">
+                <img class="img-fluid" src="../img/beneficio.jpeg" alt="Beneficios">
             </div>
-            <div class="section_texto">
-                <span class="span_black">Beneficios de nuestro Equipos</span>
-                <p>
+            <div class="col-lg-6 p-4 align-self-center sections_text">
+                <h2 class="display-5 text-center">Beneficios de nuestro Equipos</h2>
+                <p class="text-center">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque corrupti incidunt, expedita
                     laboriosam quia dolor fuga ut aspernatur perferendis!
                 </p>
@@ -47,77 +73,89 @@
         </section>
 
         <!-- Tiempo Real  -->
-        <section class="section">
-            <div class="section_texto">
-                <span class="span_black">Datos en Tiempo Real</span>
-                <p>
+        <section class="row justify-content-center bg-primary text-light mt-4 mb-4 ms-2 me-2 shadow-lg">
+            <div class="col-lg-6 p-4 align-self-center order-lg-first section_texto">
+                <h2 class="display-5 text-center">Datos en Tiempo Real</h2>
+                <p class="text-center">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque corrupti incidunt, expedita
                     laboriosam quia dolor fuga ut aspernatur perferendis!
                 </p>
             </div>
-            <div class="section_img">
-                <img src="../img/real-time.jpeg" alt="TiempoReal">
+            <div class="col-lg-6 align-self-center">
+                <img class="img-fluid" src="../img/real-time.jpeg" alt="TiempoReal">
             </div>
         </section>
-
 
         <!-- Datos Historicos  -->
-        <section class="section">
-            <div class="section_img">
-                <img src="../img/hist_data.pbm" alt="Historicos">
+        <section class="row justify-content-center bg-light mt-4 mb-4 ms-2 me-2 shadow-lg">
+            <div class="col-lg-6 align-self-center">
+                <img class="img-fluid" src="../img/hist_data.pbm" alt="Historicos">
             </div>
-            <div class="section_texto">
-                <span class="span_black">Datos almacenado en la nube</span>
-                <p>
+            <div class="col-lg-6 p-4 align-self-center section_texto">
+                <h2 class="display-5 text-center">Datos almacenado en la nube</h2>
+                <p class="text-center">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque corrupti incidunt, expedita
                     laboriosam quia dolor fuga ut aspernatur perferendis!
-                    </p>
+                </p>
             </div>
         </section>
 
-            <!-- Configuracinoes  -->
-            <section class="section">
-                <div class="section_texto">
-                    <span class="span_black">Configuraciones para cada necesidad</span>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque corrupti incidunt,
-                        expedita
-                        laboriosam quia dolor fuga ut aspernatur perferendis!
-                    </p>
-                </div>
-                <div class="section_img">
-                    <img src="../img/settings.jpeg" alt="setting">
-                </div>
-            </section>
+        <!-- Configuracinoes  -->
+        <section class="row justify-content-center bg-primary text-light mt-4 mb-4 ms-2 me-2 shadow-lg">
+            <div class="col-lg-6 p-4 align-self-center order-lg-first section_texto">
+                <h2 class="display-5 text-center">Configuraciones para cada necesidad</h2>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque corrupti incidunt,
+                    expedita
+                    laboriosam quia dolor fuga ut aspernatur perferendis!
+                </p>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <img class="img-fluid" src="../img/settings.jpeg" alt="setting">
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer_nav">
-            <span class="footer_titulo">Mapa de Sitio</span>
-            <nav>
-                <ul>
-                    <li class="item_barra"><a href="../index.html">Home</a></li>
-                    <li class="item_barra"><a href="./descripcion.html">Descripcion</a></li>
-                    <li class="item_barra"><a href="./galeria.html">Galeria</a></li>
-                    <li class="item_barra"><a href="./nosotros.html">Compañia</a></li>
-                    <li class="item_barra"><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
 
-        <div class="footer_sociales">
-            <span class="footer_titulo">Redes Sociales</span>
-            <ul>
-                <li class="item_barra"><a href="https://www.facebook.com/dyt.ingenieria" target="blank"> Facebook</a></li>
-                <li class="item_barra"><a href="https://www.instagram.com/dyt.iot/" target="blank"> Instagram</a></li>
-                <li class="item_barra"><a href="https://ar.linkedin.com/in/dyt-iot?trk=public_profile_samename-profile"> LikedIn</a></li>
-                <li class="item_barra"><a href="https://github.com/dytsoluciones" target="blank"> Github</a></li>
-            </ul>
-        </div>
-        <div class="footer_firma">
-            <span>by Spesot Enzo S. | 2022 © copyright all rights reserved</span>
+    <footer class="container-fluid bg-primary text-light p-4">
+        <div class="conteiner">
+            <div class="row">
+                <div class="col-6 col-lg-4 col-xl-2">
+                    <h5>Mapa del Sitio</h5>
+                    <nav class="nav flex-column">
+                        <a href="../index.html" class="item_barra text-light nav-link fw-lighter">Home</a>
+                        <a href="./descripcion.html" class="nav-link text-light item_barra fw-lighter">Descripcion</a>
+                        <a href="./galeria.html" class="nav-link text-light item_barra fw-lighter">Galeria</a>
+                        <a href="./nosotros.html" class="nav-link text-light item_barra fw-lighter">Compañia</a>
+                        <a href="./contacto.html" class="nav-link text-light item_barra fw-lighter">Contactos</a>
+                    </nav>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-2">
+                    <h5>Redes Sociales</h5>
+                    <nav class="nav flex-column">
+                        <a href="https://www.facebook.com/dyt.ingenieria"
+                            class="nav-link fw-lighter item_barra text-light" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/dyt.iot/" class="nav-link fw-lighter item_barra text-light"
+                            target="_blank">Instagram</a>
+                        <a href="https://ar.linkedin.com/in/dyt-iot?trk=public_profile_samename-profile"
+                            class="nav-link fw-lighter item_barra text-light" target="_blank">LikedIn</a>
+                        <a href="https://github.com/dytsoluciones" class="nav-link fw-lighter item_barra text-light"
+                            target="_blank">Github</a>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="fw-lighter text-end">by Spesot Enzo S. | 2022 © copyright all rights reserved</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
