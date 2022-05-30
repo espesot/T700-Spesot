@@ -18,8 +18,10 @@
   transform: scaleY(1.4); }
 
 header {
+  background-color: #0d6efd;
   padding: 1em; }
   header nav {
+    background-color: #0d6efd;
     margin: 0.1em 2em 0.1em 2em; }
   header img {
     width: 3em; }
@@ -96,3 +98,7 @@ header {
 .img_g {
   max-width: 100%;
   border-radius: 4px; }
+
+footer {
+  background-color: grey;
+  color: white; }

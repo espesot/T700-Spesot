@@ -25,8 +25,10 @@
 }
 // las clses nav e img dentro del header  son hijos 
 header {
+    background-color: $color_principal;
     padding: 1em;
     nav {
+        background-color: $color_principal;
         margin: 0.1em 2em 0.1em 2em;
     }
     img {
@@ -120,4 +122,9 @@ header {
 .img_g {
     max-width: 100%;
     border-radius: 4px;
+}
+
+footer{
+    background-color: $color_footer;
+    color: $color_textoFooter;
 }
