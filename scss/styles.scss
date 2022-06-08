@@ -1,4 +1,7 @@
 @import "colores";
+@import "variables";
+
+
 
 /* Reset CSS  */
 
@@ -6,6 +9,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+//  se asignan los colores a las variable de acuerdo a la paleta que se elija 
+@if $valorPaleta == uno {
+
+    $Lcolor_principal: map-get($colorPaletaUno, color_principal);
+    $Lcolor_header: map-get($colorPaletaUno , color_header);
+    $Lcolor_footer: map-get($colorPaletaUno , color_footer);
+    $Lcolor_textoFooter:map-get($colorPaletaUno ,color_textoFooter);
+    $Lcolor_bg-dark: map-get($colorPaletaUno ,color_bg-dark);
+    $Lcolor_tx-dark:map-get($colorPaletaUno ,color_tx-dark);
+    $Lcolor_bg-light:map-get($colorPaletaUno ,color_bg-light);
+    $Lcolor_tx-light:map-get($colorPaletaUno ,color_tx-light);
+    
+}
+@else if $valorPaleta == dos {
+    $Lcolor_principal: map-get($colorPaletaDos , color_principal);
+    $Lcolor_header: map-get($colorPaletaDos , color_header);
+    $Lcolor_footer: map-get($colorPaletaDos , color_footer);
+    $Lcolor_textoFooter:map-get($colorPaletaDos ,color_textoFooter);
+    $Lcolor_bg-dark: map-get($colorPaletaDos ,color_bg-dark);
+    $Lcolor_tx-dark:map-get($colorPaletaDos ,color_tx-dark);
+    $Lcolor_bg-light:map-get($colorPaletaDos ,color_bg-light);
+    $Lcolor_tx-light:map-get($colorPaletaDos ,color_tx-light);
 }
 
 /* se modifica el tiempo de la animacion de la imagen del menu  */
@@ -22,15 +49,19 @@
 /* es una pseudoclase.. */
 .item_barra:hover {
     transform: scaleY(1.4);
+    color: $Lcolor_principal;
 }
+
 // las clses nav e img dentro del header  son hijos 
 header {
-    background-color: $color_principal;
+    background-color: $Lcolor_header;
     padding: 1em;
+
     nav {
-        background-color: $color_principal;
+        background-color: $Lcolor_header;
         margin: 0.1em 2em 0.1em 2em;
     }
+
     img {
         width: 3em;
     }
@@ -62,29 +93,32 @@ header {
     padding: 4em;
 }
 
+
+// .galeria_grid {
+//     margin: 1em 2em 1em 2em;
+//     box-shadow: 10px 10px 15px $color_sombra;
+//     justify-content: center;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 2em;
+// }
+// .section_galeria {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     margin: 1em 2em 1em 2em;
+//     box-shadow: 10px 10px 15px $color_sombra;
+//     background-color: rgb(249, 241, 231);
+// }
+
 .img_clientes {
     padding: 1em;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
     box-shadow: 10px 10px 15px $color_sombra;
 }
-
-.galeria_grid {
-    margin: 1em 2em 1em 2em;
-    box-shadow: 10px 10px 15px $color_sombra;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-}
-
-    .img_clientes {
-        padding: 1em;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        box-shadow: 10px 10px 15px $color_sombra;
-    }
 
 .cli_uno {
     grid-row-start: 1;
@@ -109,22 +143,55 @@ header {
     animation-delay: 0.5s;
 }
 
+// clase que se usa para el extender.. 
+.alineaciones{
+    margin: 1em 2em 1em 2em;
+    box-shadow: 10px 10px 15px $color_sombra;
+}
 /* section  */
 .section_galeria {
+    @extend.alineaciones;
+    // margin: 1em 2em 1em 2em;
+    // box-shadow: 10px 10px 15px $color_sombra;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 1em 2em 1em 2em;
-    box-shadow: 10px 10px 15px lightslategrey;
     background-color: rgb(249, 241, 231);
 }
 
+.galeria_grid {
+    @extend.alineaciones;
+    // margin: 1em 2em 1em 2em;
+    // box-shadow: 10px 10px 15px $color_sombra;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
 .img_g {
     max-width: 100%;
     border-radius: 4px;
 }
 
-footer{
-    background-color: $color_footer;
-    color: $color_textoFooter;
+footer {
+    background-color: $Lcolor_footer;
+    color: $Lcolor_textoFooter;
+
+    nav {
+        a {
+            color:$Lcolor_textoFooter;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.dark {
+    background-color: $Lcolor_principal;
+    color:$Lcolor_tx-dark;
+}
+
+.light {
+    background-color: $Lcolor_bg-light;
+    color: $Lcolor_principal;
 }

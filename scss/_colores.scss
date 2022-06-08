@@ -1,4 +1,26 @@
-$color_sombra: lightslategrey;
-$color_principal: #0d6efd;
-$color_footer: grey;
-$color_textoFooter:white;
+// paleta 1 para una temporada
+$colorPaletaUno: (
+    color_principal: #0d6efd,
+    color_header:#0d6efd,
+    color_footer: grey,
+    color_textoFooter:white,
+    color_bg-dark: black,
+    color_tx-dark: white,
+    color_bg-light: beige,
+    color_tx-light: black
+
+);
+
+$colorPaletaDos: (
+    color_principal: #07924a,
+    color_header:#0ae64c,
+    color_footer: rgb(212, 104, 104),
+    color_textoFooter:yellow,
+    color_bg-dark: green,
+    color_tx-dark: aqua,
+    color_bg-light: pink,
+    color_tx-light: red
+
+);
+$color_sombra: lightslategrey,
+
