@@ -1,6 +1,6 @@
 @import "colores";
 @import "variables";
-
+@import "mixins";
 
 
 /* Reset CSS  */
@@ -77,21 +77,35 @@ header {
     background-size: cover;
     height: 80vh;
 }
+// utilizo el mixin en estas clases 
 
 .section_texto p {
-    padding: 1em;
-    line-height: 2em;
-    font-size: 1.5em;
+    @include estilo(1em,1.5em,2em)
     font-style: italic;
     text-align: center;
 }
 
 .section__ul {
-    font-size: 150%;
+    @include estilo(4em,150%,2em)
     font-weight: bolder;
-    line-height: 2em;
-    padding: 4em;
 }
+// .section_texto p {
+//     padding: 1em;
+//     line-height: 2em;
+//     font-size: 1.5em;
+//     font-style: italic;
+//     text-align: center;
+// }
+
+// .section__ul {
+//     font-size: 150%;
+//     font-weight: bolder;
+//     line-height: 2em;
+//     padding: 4em;
+// }
+
+
+
 
 
 // .galeria_grid {

@@ -37,16 +37,16 @@ header {
 
 .section_texto p {
   padding: 1em;
-  line-height: 2em;
   font-size: 1.5em;
+  line-height: 2em;
   font-style: italic;
   text-align: center; }
 
 .section__ul {
+  padding: 4em;
   font-size: 150%;
-  font-weight: bolder;
   line-height: 2em;
-  padding: 4em; }
+  font-weight: bolder; }
 
 .img_clientes {
   padding: 1em;
