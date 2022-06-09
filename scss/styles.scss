@@ -80,50 +80,15 @@ header {
 // utilizo el mixin en estas clases 
 
 .section_texto p {
-    @include estilo(1em,1.5em,2em)
+    @include estilo(1em,1.5em,2em);
     font-style: italic;
     text-align: center;
 }
 
 .section__ul {
-    @include estilo(4em,150%,2em)
+    @include estilo(4em,150%,2em);
     font-weight: bolder;
 }
-// .section_texto p {
-//     padding: 1em;
-//     line-height: 2em;
-//     font-size: 1.5em;
-//     font-style: italic;
-//     text-align: center;
-// }
-
-// .section__ul {
-//     font-size: 150%;
-//     font-weight: bolder;
-//     line-height: 2em;
-//     padding: 4em;
-// }
-
-
-
-
-
-// .galeria_grid {
-//     margin: 1em 2em 1em 2em;
-//     box-shadow: 10px 10px 15px $color_sombra;
-//     justify-content: center;
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     gap: 2em;
-// }
-// .section_galeria {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-around;
-//     margin: 1em 2em 1em 2em;
-//     box-shadow: 10px 10px 15px $color_sombra;
-//     background-color: rgb(249, 241, 231);
-// }
 
 .img_clientes {
     padding: 1em;
@@ -165,8 +130,6 @@ header {
 /* section  */
 .section_galeria {
     @extend.alineaciones;
-    // margin: 1em 2em 1em 2em;
-    // box-shadow: 10px 10px 15px $color_sombra;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -175,8 +138,6 @@ header {
 
 .galeria_grid {
     @extend.alineaciones;
-    // margin: 1em 2em 1em 2em;
-    // box-shadow: 10px 10px 15px $color_sombra;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
