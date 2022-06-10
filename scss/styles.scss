@@ -11,6 +11,7 @@
     box-sizing: border-box;
 }
 
+
 //  se asignan los colores a las variable de acuerdo a la paleta que se elija 
 @if $valorPaleta == uno {
 
@@ -41,7 +42,6 @@
 }
 
 .item_barra {
-    /* border: solid 3px; */
     padding: 2px;
     transition: all .3s;
 }

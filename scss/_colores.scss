@@ -1,4 +1,4 @@
-// paleta 1 para una temporada
+// paleta para una temporada
 $colorPaletaUno: (
     color_principal: #0d6efd,
     color_header:#0d6efd,
@@ -8,7 +8,6 @@ $colorPaletaUno: (
     color_tx-dark: white,
     color_bg-light: beige,
     color_tx-light: black
-
 );
 
 $colorPaletaDos: (
@@ -22,5 +21,6 @@ $colorPaletaDos: (
     color_tx-light: red
 
 );
-$color_sombra: lightslategrey,
+
+$color_sombra: lightslategrey;
 
