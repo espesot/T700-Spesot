@@ -13,27 +13,31 @@
 
 
 //  se asignan los colores a las variable de acuerdo a la paleta que se elija 
-@if $valorPaleta == uno {
+@if $valorPaleta ==uno {
 
     $Lcolor_principal: map-get($colorPaletaUno, color_principal);
     $Lcolor_header: map-get($colorPaletaUno , color_header);
     $Lcolor_footer: map-get($colorPaletaUno , color_footer);
-    $Lcolor_textoFooter:map-get($colorPaletaUno ,color_textoFooter);
-    $Lcolor_bg-dark: map-get($colorPaletaUno ,color_bg-dark);
-    $Lcolor_tx-dark:map-get($colorPaletaUno ,color_tx-dark);
-    $Lcolor_bg-light:map-get($colorPaletaUno ,color_bg-light);
-    $Lcolor_tx-light:map-get($colorPaletaUno ,color_tx-light);
-    
+    $Lcolor_textoFooter: map-get($colorPaletaUno , color_textoFooter);
+    $Lcolor_bg-dark: map-get($colorPaletaUno , color_bg-dark);
+    $Lcolor_tx-dark: map-get($colorPaletaUno , color_tx-dark);
+    $Lcolor_bg-light: map-get($colorPaletaUno , color_bg-light);
+    $Lcolor_tx-light: map-get($colorPaletaUno , color_tx-light);
+    $Lcolor_bg-galeria: map-get($colorPaletaUno, color_bg-galeria);
+
+
 }
-@else if $valorPaleta == dos {
+
+@else if $valorPaleta ==dos {
     $Lcolor_principal: map-get($colorPaletaDos , color_principal);
     $Lcolor_header: map-get($colorPaletaDos , color_header);
     $Lcolor_footer: map-get($colorPaletaDos , color_footer);
-    $Lcolor_textoFooter:map-get($colorPaletaDos ,color_textoFooter);
-    $Lcolor_bg-dark: map-get($colorPaletaDos ,color_bg-dark);
-    $Lcolor_tx-dark:map-get($colorPaletaDos ,color_tx-dark);
-    $Lcolor_bg-light:map-get($colorPaletaDos ,color_bg-light);
-    $Lcolor_tx-light:map-get($colorPaletaDos ,color_tx-light);
+    $Lcolor_textoFooter: map-get($colorPaletaDos , color_textoFooter);
+    $Lcolor_bg-dark: map-get($colorPaletaDos , color_bg-dark);
+    $Lcolor_tx-dark: map-get($colorPaletaDos , color_tx-dark);
+    $Lcolor_bg-light: map-get($colorPaletaDos , color_bg-light);
+    $Lcolor_tx-light: map-get($colorPaletaDos , color_tx-light);
+    $Lcolor_bg-galeria: map-get($colorPaletaDos, color_bg-galeria);
 }
 
 /* se modifica el tiempo de la animacion de la imagen del menu  */
@@ -59,11 +63,10 @@ header {
 
     nav {
         background-color: $Lcolor_header;
-        margin: 0.1em 2em 0.1em 2em;
     }
 
     img {
-        width: 3em;
+        width: 4em;
     }
 }
 
@@ -71,22 +74,36 @@ header {
 
 /* portada  */
 .portada {
-    background-image: url("../img/heladera.JPG");
+    position: relative;
+    height: 80vh;
+    color: white;
+	text-shadow: 5px 5px 10px black;
+}
+
+.portada::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/portada.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 80vh;
+    filter: brightness(0.6) blur(2px);
 }
+
 // utilizo el mixin en estas clases 
 
 .section_texto p {
-    @include estilo(1em,1.5em,2em);
+    @include estilo(1em, 1.5em, 2em);
     font-style: italic;
     text-align: center;
 }
 
 .section__ul {
-    @include estilo(4em,150%,2em);
+    @include estilo(4em, 150%, 2em);
     font-weight: bolder;
 }
 
@@ -123,17 +140,17 @@ header {
 }
 
 // clase que se usa para el extender.. 
-.alineaciones{
+.alineaciones {
     margin: 1em 2em 1em 2em;
     box-shadow: 10px 10px 15px $color_sombra;
 }
+
 /* section  */
 .section_galeria {
     @extend.alineaciones;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(249, 241, 231);
 }
 
 .galeria_grid {
@@ -143,6 +160,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
 }
+
 .img_g {
     max-width: 100%;
     border-radius: 4px;
@@ -154,7 +172,7 @@ footer {
 
     nav {
         a {
-            color:$Lcolor_textoFooter;
+            color: $Lcolor_textoFooter;
             text-decoration: none;
         }
 
@@ -162,11 +180,13 @@ footer {
 }
 
 .dark {
-    background-color: $Lcolor_principal;
-    color:$Lcolor_tx-dark;
+    @include colorl-DyL($Lcolor_principal, $Lcolor_tx-dark);
 }
 
 .light {
-    background-color: $Lcolor_bg-light;
-    color: $Lcolor_principal;
+    @include colorl-DyL($Lcolor_bg-light, $Lcolor_tx-light);
+}
+
+.darkGaleria {
+    @include colorl-DyL($Lcolor_footer, $Lcolor_tx-dark);
 }

@@ -7,20 +7,21 @@ $colorPaletaUno: (
     color_bg-dark: black,
     color_tx-dark: white,
     color_bg-light: beige,
-    color_tx-light: black
+    color_tx-light: black,
+    color_bg-galeria: #b6eff9
 );
 
 $colorPaletaDos: (
-    color_principal: #07924a,
-    color_header:#0ae64c,
-    color_footer: rgb(212, 104, 104),
-    color_textoFooter:yellow,
-    color_bg-dark: green,
-    color_tx-dark: aqua,
-    color_bg-light: pink,
-    color_tx-light: red
+    color_principal: #060607,
+    color_header:    #1f232a,
+    color_footer: #686781,
+    color_textoFooter:#9590b3,
+    color_bg-dark: #1f232a,
+    color_tx-dark: #9590b3,
+    color_bg-light: #9590b3,
+    color_tx-light: #1f232a,
+    color_bg-galeria: #b6eff9
 
 );
 
 $color_sombra: lightslategrey;
-

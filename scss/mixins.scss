@@ -1,6 +1,12 @@
-// creo un mixin para pasar cierto prametros de estilos que se me repiten en clases 
+//mixin para pasar cierto prametros de estilos que se me repiten en clases 
 @mixin estilo ($padding, $fontSize, $line_height){
     padding: $padding;
     font-size: $fontSize;
     line-height: $line_height;
+}
+
+//mixin para las clases Dark y light 
+@mixin colorl-DyL ($bg, $colordyl){
+    background-color: $bg;
+    color: $colordyl;
 }
